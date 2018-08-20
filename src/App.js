@@ -23,9 +23,9 @@ class App extends Component {
     
   }
 
-  renderSixPieces = (index) => {
+  renderSixPieces = (index, classN) => {
     return (
-      <div id={index} className="frame">
+      <div id={index} className={`frame ${classN && classN}`}>
         <div className={`piece piece1 ${Array.isArray(this.state.pieceN) && (( this.state.pieceN.indexOf(`${index}1`) !== -1) && 'hide')}` }></div>
         <div className={`piece piece2 ${Array.isArray(this.state.pieceN) && (( this.state.pieceN.indexOf(`${index}2`) !== -1) && 'hide')}`}></div>
         <div className={`piece piece3 ${Array.isArray(this.state.pieceN) && (( this.state.pieceN.indexOf(`${index}3`) !== -1) && 'hide')}`}></div>
@@ -36,9 +36,9 @@ class App extends Component {
     )
   }
 
-  renderFivePieces = (index) => {
+  renderFivePieces = (index, classN) => {
     return (
-      <div id={index} className="frame">
+      <div id={index} className={`frame ${classN && classN}`}>
       <div className={`piece piece1 ${Array.isArray(this.state.pieceN) && (( this.state.pieceN.indexOf(`${index}1`) !== -1) && 'hide')}` }></div>
       <div className={`piece piece2 ${Array.isArray(this.state.pieceN) && (( this.state.pieceN.indexOf(`${index}2`) !== -1) && 'hide')}`}></div>
       <div className={`piece piece3 ${Array.isArray(this.state.pieceN) && (( this.state.pieceN.indexOf(`${index}3`) !== -1) && 'hide')}`}></div>
@@ -59,16 +59,76 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <div className="stage">
+        {/* <div className="stage2Columns">
+          {this.renderSixPieces(1)}
+          {this.renderFivePieces(2)}
+          {this.renderSixPieces(3)}
+          {this.renderFivePieces(4)}
+        </div>
+
+        <div className="stage3Columns">
+          {this.renderSixPieces(1)}
+          {this.renderFivePieces(2)}
+          {this.renderSixPieces(3)}
+          {this.renderFivePieces(4 ,'third')}
+          {this.renderSixPieces(5,'third')}
+        </div> */}
+
+         {/* <div className="stage3Columns">
           {this.renderSixPieces(1)}
           {this.renderFivePieces(2)}
           {this.renderSixPieces(3)}
           {this.renderFivePieces(4)}
           {this.renderSixPieces(5)}
-          
-         
-         
+          {this.renderFivePieces(6)}
+        </div> */}
+
+         {/* <div className="stage4Columns">
+          {this.renderSixPieces(1)}
+          {this.renderFivePieces(2)}
+          {this.renderSixPieces(3)}
+          {this.renderFivePieces(4)}
+          {this.renderSixPieces(5, 'quarter')}
+          {this.renderFivePieces(6, 'quarter')}
+          {this.renderSixPieces(7, 'quarter')}
+        </div> */}
+
+        {/* <div className="stage4Columns">
+          {this.renderSixPieces(1)}
+          {this.renderFivePieces(2)}
+          {this.renderSixPieces(3)}
+          {this.renderFivePieces(4)}
+          {this.renderSixPieces(5)}
+          {this.renderFivePieces(6)}
+          {this.renderSixPieces(7)}
+          {this.renderFivePieces(8)}
+        </div> */}
+
+        {/* <div className="stage3Columns">
+          {this.renderSixPieces(1)}
+          {this.renderFivePieces(2)}
+          {this.renderSixPieces(3)}
+          {this.renderFivePieces(4)}
+          {this.renderSixPieces(5)}
+          {this.renderFivePieces(6)}
+          {this.renderSixPieces(7)}
+          {this.renderFivePieces(8)}
+          {this.renderSixPieces(9)}
+        </div> */}
+
+         <div className="stage5Columns">
+          {this.renderSixPieces(1)}
+          {this.renderFivePieces(2)}
+          {this.renderSixPieces(3)}
+          {this.renderFivePieces(4)}
+          {this.renderSixPieces(5)}
+          {this.renderFivePieces(6)}
+          {this.renderSixPieces(7)}
+          {this.renderFivePieces(8)}
+          {this.renderSixPieces(9)}
+          {this.renderFivePieces(10)}
         </div>
+
         <button onClick={this.handlePieces}>click</button>
        
       </div>
